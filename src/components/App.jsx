@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import { Sections } from './Section';
+import { FeedbackOptions } from './FeedbackOptions';
 export class App extends Component {
   state = {
     good: 0,
@@ -17,11 +18,13 @@ export class App extends Component {
           justifyContent: 'center',
           alignItems: 'center',
           gap: 10,
-          fontSize: 40,
+          fontSize: 30,
           color: '#010101',
         }}
       >
-        <Sections title="Please leave feedback"></Sections>
+        <Sections title="Please leave feedback">
+          <FeedbackOptions options={this.state}></FeedbackOptions>
+        </Sections>
 
         <Sections title="Statistics"></Sections>
       </div>
